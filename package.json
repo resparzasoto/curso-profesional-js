@@ -5,7 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "repository": {
     "type": "git",
@@ -21,6 +28,8 @@
   },
   "homepage": "https://github.com/resparzasoto/curso-profesional-js#readme",
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "husky": "^4.2.5",
+    "live-server": "^1.2.1",
+    "standard": "^14.3.4"
   }
 }
