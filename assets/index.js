@@ -2,7 +2,7 @@
 
 import MediaPlayer from './MediaPlayer.js'
 import AutoPlay from './plugins/AutoPlay.js'
-import AutoPause from './plugins/AutoPause.js'
+import AutoPause from './plugins/AutoPause.ts'
 
 const video = document.querySelector('video')
 const btnPlayPause = document.getElementById('btn-play-pause')
@@ -22,6 +22,6 @@ btnMuteUnmute.onclick = () => player.toggleMute()
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js')
     .catch(e => {
-      console.log(e)
+      console.log(e.message)
     })
 }

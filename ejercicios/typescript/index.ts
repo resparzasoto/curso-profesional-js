@@ -85,8 +85,8 @@ function fullNameWithDefaultParameters(
 
 const richardWithDefault = fullNameWithDefaultParameters("Richard");
 console.log(richardWithDefault);
-// Interfaces
 
+// Interfaces
 interface Rect {
   width: number;
   height: number;
