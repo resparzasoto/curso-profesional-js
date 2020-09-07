@@ -85,3 +85,30 @@ function fullNameWithDefaultParameters(
 
 const richardWithDefault = fullNameWithDefaultParameters("Richard");
 console.log(richardWithDefault);
+// Interfaces
+
+interface Rect {
+  width: number;
+  height: number;
+  color?: Color;
+}
+
+let rect: Rect = {
+  width: 4,
+  height: 6,
+};
+
+function area(r: Rect) {
+  return r.width * r.height;
+}
+
+const areaRect = area(rect);
+console.log(areaRect);
+
+console.log(rect.toString());
+
+rect.toString = function () {
+  return this.color ? `Un rectángulo ${this.color}` : `Un rectángulo sin color`;
+};
+
+console.log(rect.toString());
