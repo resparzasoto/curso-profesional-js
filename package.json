@@ -4,15 +4,9 @@
   "description": "Curso Profesional de JavaScript",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
+    "start": "parcel index.html ejercicios/index.html ejercicios/**/*.html",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard",
-    "lint-fix": "standard --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+    "test-true": "exit 0"
   },
   "repository": {
     "type": "git",
@@ -29,7 +23,15 @@
   "homepage": "https://github.com/resparzasoto/curso-profesional-js#readme",
   "devDependencies": {
     "husky": "^4.2.5",
-    "live-server": "^1.2.1",
-    "standard": "^14.3.4"
-  }
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test-true"
+    }
+  },
+  "browserlist": [
+    "last 1 Chrome version"
+  ]
 }
