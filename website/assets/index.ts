@@ -1,9 +1,9 @@
 'use strict'
 
-import MediaPlayer from './MediaPlayer'
-import AutoPlay from './plugins/AutoPlay'
-import AutoPause from './plugins/AutoPause'
-import Ads from './plugins/ads'
+import MediaPlayer from '@resparzasoto/rbnmediaplayer'
+// import AutoPlay from './plugins/AutoPlay'
+// import AutoPause from './plugins/AutoPause'
+// import Ads from './plugins/ads'
 
 const video = document.querySelector('video')
 const btnPlayPause = document.getElementById('btn-play-pause')
@@ -12,9 +12,9 @@ const btnMuteUnmute = document.getElementById('btn-mute-unmute')
 const player = new MediaPlayer({
   el: video,
   plugins: [
-    new AutoPlay(),
-    new AutoPause(),
-    new Ads()
+    // new AutoPlay(),
+    // new AutoPause(),
+    // new Ads()
   ]
 })
 
